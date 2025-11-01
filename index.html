@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LA Nova Technologie - Services Informatiques en Haïti</title>
+    <style>
+        :root {
+            --vert: #2ecc71;
+            --blanc: #ffffff;
+            --orange: #e67e22;
+            --rouge: #e74c3c;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--vert), var(--orange));
+            color: var(--blanc);
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo h1 {
+            font-size: 1.8rem;
+            margin-left: 10px;
+        }
+        
+        .logo-circle {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--blanc);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--vert);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 20px;
+        }
+        
+        nav ul li a {
+            color: var(--blanc);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        nav ul li a:hover {
+            color: var(--rouge);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+            color: var(--blanc);
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--orange);
+            color: var(--blanc);
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            background: var(--rouge);
+            transform: translateY(-3px);
+        }
+        
+        /* Services Section */
+        .services {
+            padding: 80px 0;
+            background: var(--blanc);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: var(--vert);
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background: var(--blanc);
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--vert);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .service-card h3 {
+            color: var(--vert);
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+        
+        .service-card p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .service-price {
+            font-weight: bold;
+            color: var(--rouge);
+            font-size: 1.2rem;
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 80px 0;
+            background: #f5f5f5;
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        
+        .contact-info {
+            background: var(--blanc);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .contact-info h3 {
+            color: var(--vert);
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+        
+        .contact-details {
+            margin-bottom: 30px;
+        }
+        
+        .contact-details p {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .contact-details i {
+            margin-right: 10px;
+            color: var(--orange);
+        }
+        
+        .whatsapp-btn {
+            display: inline-block;
+            background: #25D366;
+            color: var(--blanc);
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .whatsapp-btn:hover {
+            background: #128C7E;
+        }
+        
+        .contact-form {
+            background: var(--blanc);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        .form-control:focus {
+            border-color: var(--vert);
+            outline: none;
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .services-checkbox {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+        }
+        
+        .checkbox-item input {
+            margin-right: 8px;
+        }
+        
+        /* Footer */
+        footer {
+            background: #333;
+            color: var(--blanc);
+            padding: 50px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-column h3 {
+            color: var(--orange);
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+        
+        .footer-column p, .footer-column a {
+            color: #bbb;
+            margin-bottom: 10px;
+            display: block;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-column a:hover {
+            color: var(--blanc);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            color: #bbb;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin-top: 20px;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 0 10px;
+            }
+            
+            .hero h2 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-circle">LN</div>
+                    <h1>LA Nova Technologie</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#accueil">Accueil</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="accueil">
+        <div class="container">
+            <h2>Solutions Technologiques Innovantes</h2>
+            <p>LA Nova Technologie vous offre des services informatiques complets pour propulser votre entreprise vers l'avenir numérique.</p>
+            <a href="#contact" class="btn">Contactez-nous</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nos Services</h2>
+                <p>Découvrez notre gamme complète de services informatiques adaptés à vos besoins</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Création de Site Web</h3>
+                    <p>Conception et développement de sites web professionnels, responsifs et optimisés pour le référencement.</p>
+                    <p class="service-price">À partir de 15,000 HTG</p>
+                </div>
+                <div class="service-card">
+                    <h3>Applications Mobiles & Web</h3>
+                    <p>Développement d'applications mobiles (iOS, Android) et web sur mesure pour votre entreprise.</p>
+                    <p class="service-price">À partir de 25,000 HTG</p>
+                </div>
+                <div class="service-card">
+                    <h3>Maintenance à Distance</h3>
+                    <p>Assistance technique et maintenance de vos systèmes via AnyDesk, Zoom et autres outils à distance.</p>
+                    <p class="service-price">À partir de 5,000 HTG/mois</p>
+                </div>
+                <div class="service-card">
+                    <h3>Design Graphique</h3>
+                    <p>Création de flyers, affiches, cartes de visite, logos et autres supports de communication visuelle.</p>
+                    <p class="service-price">À partir de 3,000 HTG</p>
+                </div>
+                <div class="service-card">
+                    <h3>Formation en Informatique</h3>
+                    <p>Formations privées en informatique de bureau, réseaux, programmation et autres technologies.</p>
+                    <p class="service-price">À partir de 10,000 HTG</p>
+                </div>
+                <div class="service-card">
+                    <h3>Consultation Technique</h3>
+                    <p>Conseils et accompagnement pour vos projets technologiques et transformation numérique.</p>
+                    <p class="service-price">À partir de 8,000 HTG</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contactez-nous</h2>
+                <p>N'hésitez pas à nous contacter pour toute demande de service ou d'information</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Nos Coordonnées</h3>
+                    <div class="contact-details">
+                        <p><i>📍</i> Rue Bellevue, Palais Roi, Limonade, Haïti</p>
+                        <p><i>📞</i> Téléphone: +509 40104585</p>
+                        <p><i>💬</i> WhatsApp: +509 40104585</p>
+                        <p><i>✉️</i> Email: info@lanovatechnologie.ht</p>
+                    </div>
+                    <a href="https://wa.me/50940104585" class="whatsapp-btn" target="_blank">Nous contacter sur WhatsApp</a>
+                </div>
+                <div class="contact-form">
+                    <h3>Demande de Service</h3>
+                    <form id="serviceForm">
+                        <div class="form-group">
+                            <label for="name">Nom Complet</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Téléphone</label>
+                            <input type="tel" id="phone" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Services Demandés</label>
+                            <div class="services-checkbox">
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="web" name="services" value="web">
+                                    <label for="web">Site Web</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="mobile" name="services" value="mobile">
+                                    <label for="mobile">Application Mobile</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="maintenance" name="services" value="maintenance">
+                                    <label for="maintenance">Maintenance</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="design" name="services" value="design">
+                                    <label for="design">Design Graphique</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="training" name="services" value="training">
+                                    <label for="training">Formation</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="consultation" name="services" value="consultation">
+                                    <label for="consultation">Consultation</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" class="form-control" placeholder="Décrivez votre projet ou demande..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Envoyer la Demande</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>LA Nova Technologie</h3>
+                    <p>Votre partenaire technologique de confiance en Haïti pour tous vos projets numériques.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Nos Services</h3>
+                    <a href="#services">Création de Site Web</a>
+                    <a href="#services">Applications Mobiles & Web</a>
+                    <a href="#services">Maintenance à Distance</a>
+                    <a href="#services">Design Graphique</a>
+                    <a href="#services">Formation en Informatique</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <p>Rue Bellevue, Palais Roi, Limonade, Haïti</p>
+                    <p>Téléphone: +509 40104585</p>
+                    <p>WhatsApp: +509 40104585</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 LA Nova Technologie. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Form submission handling
+        document.getElementById('serviceForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const message = document.getElementById('message').value;
+            
+            // Get selected services
+            const selectedServices = [];
+            document.querySelectorAll('input[name="services"]:checked').forEach(checkbox => {
+                selectedServices.push(checkbox.value);
+            });
+            
+            // Create WhatsApp message
+            const whatsappMessage = `Bonjour, je m'appelle ${name}. Je suis intéressé(e) par les services suivants: ${selectedServices.join(', ')}. ${message}. Mon numéro est ${phone} et mon email est ${email}.`;
+            
+            // Encode message for URL
+            const encodedMessage = encodeURIComponent(whatsappMessage);
+            
+            // Open WhatsApp with pre-filled message
+            window.open(`https://wa.me/50940104585?text=${encodedMessage}`, '_blank');
+            
+            // Reset form
+            document.getElementById('serviceForm').reset();
+            
+            // Show success message
+            alert('Votre demande a été envoyée avec succès! Vous allez être redirigé vers WhatsApp.');
+        });
+    </script>
+</body>
+</html>
