@@ -21,7 +21,7 @@
         
         body {
             background-color: #f9f9f9;
-            color: #333;
+            color: #2102a7;
             line-height: 1.6;
         }
         
@@ -37,7 +37,7 @@
             background: linear-gradient(135deg, var(--vert), var(--orange));
             color: var(--blanc);
             padding: 1rem 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(139, 75, 1, 0.719);
         }
         
         .header-content {
@@ -56,17 +56,10 @@
             margin-left: 10px;
         }
         
-        .logo-circle {
-            width: 50px;
+        .logo-img {
             height: 50px;
-            border-radius: 50%;
-            background: var(--blanc);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--vert);
-            font-weight: bold;
-            font-size: 1.2rem;
+            width: auto;
+            border-radius: 5px;
         }
         
         nav ul {
@@ -75,13 +68,13 @@
         }
         
         nav ul li {
-            margin-left: 20px;
+            margin-left: 30px;
         }
         
         nav ul li a {
             color: var(--blanc);
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 1000;
             transition: all 0.3s ease;
         }
         
@@ -91,7 +84,7 @@
         
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+            background: linear-gradient(rgb(209, 161, 2), rgba(240, 20, 4, 0.7)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
             color: var(--blanc);
             padding: 100px 0;
             text-align: center;
@@ -112,7 +105,7 @@
             display: inline-block;
             background: var(--orange);
             color: var(--blanc);
-            padding: 12px 30px;
+            padding: 15px 30px;
             border-radius: 5px;
             text-decoration: none;
             font-weight: bold;
@@ -142,7 +135,7 @@
         }
         
         .section-title p {
-            color: #666;
+            color: #e0040f;
             max-width: 700px;
             margin: 0 auto;
         }
@@ -157,14 +150,14 @@
             background: var(--blanc);
             border-radius: 8px;
             padding: 30px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            box-shadow: 0 5px 15px rgba(155, 1, 160, 0.842);
             transition: all 0.3s ease;
             border-top: 4px solid var(--vert);
         }
         
         .service-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 15px 30px rgba(248, 74, 5, 0.89);
         }
         
         .service-card h3 {
@@ -174,7 +167,7 @@
         }
         
         .service-card p {
-            color: #666;
+            color: #1f013b;
             margin-bottom: 20px;
         }
         
@@ -236,7 +229,7 @@
         }
         
         .whatsapp-btn:hover {
-            background: #128C7E;
+            background: #d406db;
         }
         
         .contact-form {
@@ -292,7 +285,7 @@
         
         /* Footer */
         footer {
-            background: #333;
+            background: #0532c5;
             color: var(--blanc);
             padding: 50px 0 20px;
         }
@@ -311,8 +304,8 @@
         }
         
         .footer-column p, .footer-column a {
-            color: #bbb;
-            margin-bottom: 10px;
+            color: #eeea05;
+            margin-bottom: 14px;
             display: block;
             text-decoration: none;
             transition: all 0.3s ease;
@@ -325,8 +318,8 @@
         .copyright {
             text-align: center;
             padding-top: 20px;
-            border-top: 1px solid #444;
-            color: #bbb;
+            border-top: 1px solid #e8f805;
+            color: #55d8e9;
             font-size: 0.9rem;
         }
         
@@ -362,7 +355,9 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <div class="logo-circle">LN</div>
+                    <a href="#accueil">
+                        <img src="images/1000074545.jpg" alt="LA Nova Technologie" class="logo-img">
+                    </a>
                     <h1>LA Nova Technologie</h1>
                 </div>
                 <nav>
@@ -380,7 +375,7 @@
     <section class="hero" id="accueil">
         <div class="container">
             <h2>Solutions Technologiques Innovantes</h2>
-            <p>LA Nova Technologie vous offre des services informatiques complets pour propulser votre entreprise vers l'avenir numérique.</p>
+            <p>LA Nova Technologie vous offre des services informatiques complets pour propulser votre entreprise vers l'avenir numérique. Et vous aideras à maitriser le futur avec nos services technologiques avancés.</p>
             <a href="#contact" class="btn">Contactez-nous</a>
         </div>
     </section>
@@ -390,23 +385,23 @@
         <div class="container">
             <div class="section-title">
                 <h2>Nos Services</h2>
-                <p>Découvrez notre gamme complète de services informatiques adaptés à vos besoins</p>
+                <h3>Découvrez notre gamme complète de services informatiques adaptés à vos besoins</h3>
             </div>
             <div class="services-grid">
                 <div class="service-card">
                     <h3>Création de Site Web</h3>
-                    <p>Conception et développement de sites web professionnels, responsifs et optimisés pour le référencement.</p>
-                    <p class="service-price">À partir de 15,000 HTG</p>
-                </div>
-                <div class="service-card">
-                    <h3>Applications Mobiles & Web</h3>
-                    <p>Développement d'applications mobiles (iOS, Android) et web sur mesure pour votre entreprise.</p>
+                    <p>Conception et développement de sites web professionnels, esthetique,responsifs et optimisés pour le référencement.</p>
                     <p class="service-price">À partir de 25,000 HTG</p>
                 </div>
                 <div class="service-card">
-                    <h3>Maintenance à Distance</h3>
+                    <h3>Applications Mobiles, Web, bureau, natives, hybrides, sociales, educatives, commerciales, </h3>
+                    <p>Développement d'applications mobiles (iOS, Android)  web et web progressive  jeux  et applications adaptees selon vos besoins .</p>
+                    <p class="service-price">À partir de 50,000 HTG</p>
+                </div>
+                <div class="service-card">
+                    <h3>Maintenance à Distance ou presentiel selon le cas</h3>
                     <p>Assistance technique et maintenance de vos systèmes via AnyDesk, Zoom et autres outils à distance.</p>
-                    <p class="service-price">À partir de 5,000 HTG/mois</p>
+                    <p class="service-price">À partir de 5,000 HTG</p>
                 </div>
                 <div class="service-card">
                     <h3>Design Graphique</h3>
@@ -414,8 +409,8 @@
                     <p class="service-price">À partir de 3,000 HTG</p>
                 </div>
                 <div class="service-card">
-                    <h3>Formation en Informatique</h3>
-                    <p>Formations privées en informatique de bureau, réseaux, programmation et autres technologies.</p>
+                    <h3>Formation en Informatique a distance et en presentiel</h3>
+                    <p>Formations privées en informatique de bureau, réseaux, excel, programmation et autres technologies.</p>
                     <p class="service-price">À partir de 10,000 HTG</p>
                 </div>
                 <div class="service-card">
@@ -432,7 +427,7 @@
         <div class="container">
             <div class="section-title">
                 <h2>Contactez-nous</h2>
-                <p>N'hésitez pas à nous contacter pour toute demande de service ou d'information</p>
+                <p>N'hésitez pas à nous contacter pour toute demande de service ou d'information suplementaire</p>
             </div>
             <div class="contact-container">
                 <div class="contact-info">
@@ -441,7 +436,7 @@
                         <p><i>📍</i> Rue Bellevue, Palais Roi, Limonade, Haïti</p>
                         <p><i>📞</i> Téléphone: +509 40104585</p>
                         <p><i>💬</i> WhatsApp: +509 40104585</p>
-                        <p><i>✉️</i> Email: info@lanovatechnologie.ht</p>
+                        <p><i>✉️</i> Email: lanovatechnologie@gmail.com</p>
                     </div>
                     <a href="https://wa.me/50940104585" class="whatsapp-btn" target="_blank">Nous contacter sur WhatsApp</a>
                 </div>
@@ -511,7 +506,7 @@
                 <div class="footer-column">
                     <h3>Nos Services</h3>
                     <a href="#services">Création de Site Web</a>
-                    <a href="#services">Applications Mobiles & Web</a>
+                    <a href="#services">Applications Mobiles Web, commerciales, et autres</a>
                     <a href="#services">Maintenance à Distance</a>
                     <a href="#services">Design Graphique</a>
                     <a href="#services">Formation en Informatique</a>
@@ -524,7 +519,8 @@
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2023 LA Nova Technologie. Tous droits réservés.</p>
+                <p>&copy; 2023 LA Nova Technologie. Tous droits réservés.</p> <img src="images/1000074545.jpg" alt="LA Nova Technologie" class="logo-img">
+
             </div>
         </div>
     </footer>
