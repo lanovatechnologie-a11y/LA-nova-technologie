@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LA Nova Technologie - Services Informatiques en Haïti</title>
+    <style>
+        :root {
+            --vert: #2ecc71;
+            --blanc: #ffffff;
+            --orange: #e67e22;
+            --rouge: #e74c3c;
+            --bleu-futuriste: #0a0a2a;
+            --violet-futuriste: #6e44ff;
+            --cyan-futuriste: #00f5ff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: var(--bleu-futuriste);
+            color: var(--blanc);
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--vert), var(--orange));
+            color: var(--blanc);
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(139, 75, 1, 0.719);
+            position: relative;
+            z-index: 100;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo h1 {
+            font-size: 1.8rem;
+            margin-left: 10px;
+        }
+        
+        .logo-img {
+            height: 50px;
+            width: auto;
+            border-radius: 5px;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            color: var(--blanc);
+            text-decoration: none;
+            font-weight: 1000;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--blanc);
+            transition: width 0.3s ease;
+        }
+        
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(209, 161, 2, 0.7), rgba(240, 20, 4, 0.7)), 
+                        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%230a0a2a"/><path d="M0 0L100 100M100 0L0 100" stroke="%236e44ff" stroke-width="1"/></svg>');
+            color: var(--blanc);
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+        }
+        
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--orange);
+            color: var(--blanc);
+            padding: 15px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background: var(--rouge);
+            transform: translateY(-3px);
+        }
+        
+        /* Services Section */
+        .services {
+            padding: 80px 0;
+            background: rgba(10, 10, 42, 0.7);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: var(--cyan-futuriste);
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            color: #e8e8e8;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background: rgba(26, 26, 58, 0.8);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 8px 25px rgba(110, 68, 255, 0.2);
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--violet-futuriste);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgb(255, 238, 2);
+        }
+        
+        .service-card h3 {
+            color: var(--cyan-futuriste);
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+        
+        .service-card p {
+            color: #e8e8e8;
+            margin-bottom: 20px;
+        }
+        
+        .service-price {
+            font-weight: bold;
+            color: var(--orange);
+            font-size: 1.2rem;
+        }
+        
+        .service-card img {
+            border-radius: 5px;
+            margin: 15px 0;
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .know-more-btn {
+            display: inline-block;
+            background: transparent;
+            color: var(--cyan-futuriste);
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: 2px solid var(--cyan-futuriste);
+            margin-top: 15px;
+        }
+        
+        .know-more-btn:hover {
+            background: var(--cyan-futuriste);
+            color: var(--bleu-futuriste);
+        }
+        
+        /* Modal pour les détails des services */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(59, 8, 71, 0.938);
+            z-index: 1000;
+        }
+        
+        .modal-content {
+            position: relative;
+            background: rgba(238, 155, 2, 0.836);
+            margin: 5% auto;
+            padding: 30px;
+            width: 80%;
+            max-width: 800px;
+            border-radius: 10px;
+            border: 1px solid var(--violet-futuriste);
+            animation: modalFadeIn 0.5s;
+        }
+        
+        @keyframes modalFadeIn {
+            from { opacity: 0; transform: translateY(-50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 1.5rem;
+            color: var(--blanc);
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        
+        .close-modal:hover {
+            color: var(--violet-futuriste);
+        }
+        
+        .modal-title {
+            color: var(--cyan-futuriste);
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+        
+        .modal-body {
+            color: #e8e8e8;
+            line-height: 1.6;
+        }
+        
+        /* Video thumbnails */
+        .video-thumbnail {
+            position: relative;
+            cursor: pointer;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        
+        .video-thumbnail:hover {
+            transform: scale(1.05);
+        }
+        
+        .video-thumbnail img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60px;
+            height: 60px;
+            background: rgba(0, 245, 255, 0.8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .play-button::after {
+            content: '';
+            width: 0;
+            height: 0;
+            border-left: 15px solid var(--bleu-futuriste);
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            margin-left: 5px;
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 80px 0;
+            background: rgba(10, 10, 42, 0.7);
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        
+        .contact-info {
+            background: rgba(26, 26, 58, 0.8);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 8px 25px rgba(110, 68, 255, 0.2);
+            border: 1px solid rgba(110, 68, 255, 0.3);
+        }
+        
+        .contact-info h3 {
+            color: var(--cyan-futuriste);
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+        
+        .contact-details {
+            margin-bottom: 30px;
+        }
+        
+        .contact-details p {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .contact-details i {
+            margin-right: 10px;
+            color: var(--orange);
+        }
+        
+        .contact-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .whatsapp-btn, .email-btn, .facebook-btn {
+            display: inline-block;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        
+        .whatsapp-btn {
+            background: #25D366;
+            color: var(--blanc);
+        }
+        
+        .whatsapp-btn:hover {
+            background: #128C7E;
+            transform: translateY(-3px);
+        }
+        
+        .email-btn {
+            background: #D44638;
+            color: var(--blanc);
+        }
+        
+        .email-btn:hover {
+            background: #B03527;
+            transform: translateY(-3px);
+        }
+        
+        .facebook-btn {
+            background: #3b5998;
+            color: var(--blanc);
+        }
+        
+        .facebook-btn:hover {
+            background: #2d4373;
+            transform: translateY(-3px);
+        }
+        
+        .contact-form {
+            background: rgba(26, 26, 58, 0.8);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 8px 25px rgba(110, 68, 255, 0.2);
+            border: 1px solid rgba(110, 68, 255, 0.3);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--cyan-futuriste);
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid rgba(110, 68, 255, 0.3);
+            border-radius: 5px;
+            font-size: 1rem;
+            background: rgba(10, 10, 42, 0.5);
+            color: var(--blanc);
+            transition: all 0.3s ease;
+        }
+        
+        .form-control:focus {
+            border-color: var(--violet-futuriste);
+            outline: none;
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .services-checkbox {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+        }
+        
+        .checkbox-item input {
+            margin-right: 8px;
+        }
+        
+        /* Footer */
+        footer {
+            background: #0532c5;
+            color: var(--blanc);
+            padding: 50px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-column h3 {
+            color: var(--orange);
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+        
+        .footer-column p, .footer-column a {
+            color: #eeea05;
+            margin-bottom: 14px;
+            display: block;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-column a:hover {
+            color: var(--blanc);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #e8f805;
+            color: #55d8e9;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin-top: 20px;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            
+            nav ul li {
+                margin: 5px 10px;
+            }
+            
+            .hero h2 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .modal-content {
+                width: 95%;
+                margin: 10% auto;
+            }
+            
+            .contact-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="#accueil">
+                        <!-- Image optimisée avec lazy loading -->
+                                                     <img src="images/1000074545.jpg" alt="LA Nova Technologie" class="logo-img">
+
+                    </a>
+                    <h1>LA Nova Technologie</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#accueil">Accueil</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#info">À propos</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                         <li><a href="#payment">Paiement</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="accueil">
+        <div class="container">
+            <h2>Solutions Technologiques Innovantes</h2>
+            <p>LA Nova Technologie vous offre des services informatiques complets pour propulser votre entreprise vers l'avenir numérique. Et vous aideras à maitriser le futur avec nos services technologiques avancés.</p>
+            <a href="#contact" class="btn">Contactez-nous</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nos Services</h2>
+                <h3>Découvrez notre gamme complète de services informatiques adaptés à vos besoins</h3>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Création de Site Web</h3>
+                    <p>Conception et développement de sites web professionnels, esthetique,responsifs et optimisés pour le référencement.</p>
+                    <p class="service-price">À partir de 25,000 HTG</p>
+                    <!-- Image SVG légère en remplacement -->
+                         <img src="images/al.jpg" style="width:310px; height:180px; display:block; margin:auto" alt="Création de site web">
+                    <a href="#" class="know-more-btn" data-service="web">En savoir plus</a>
+                </div>
+                <div class="service-card">
+                    <h3>Création et développement Applications</h3>
+                    <ul>
+                        <li>mobile - Web - bureau - commerciales</li>
+                        <li>natives - hybrides - sociales - educatives</li>
+                        <li>lotterie - paris - sportif - etc</li>
+                    </ul>
+                    <p>Développement d'applications mobiles (iOS, Android) web et web progressive jeux et applications adaptees selon vos besoins.</p>
+                          <img src="images/am.jpg" style="width:200px; height:100px; display:block; margin:auto" alt="Développement d'applications">
+                    <p class="service-price">À partir de 50,000 HTG</p>
+                    <a href="#" class="know-more-btn" data-service="app">En savoir plus</a>
+                </div>
+                <div class="service-card">
+                    <h3>Maintenance à Distance ou presentiel selon le cas</h3>
+                    <p>Assistance technique et maintenance de vos systèmes via AnyDesk, Zoom et autres outils à distance.</p>
+                    <p class="service-price">À partir de 5,000 HTG</p>
+                    <img src="images/aw.png" style="width:255px; height:135px; display:block; margin:auto" alt="Maintenance informatique">
+                    <a href="#" class="know-more-btn" data-service="maintenance">En savoir plus</a>
+                </div>
+                <div class="service-card">
+                    <h3>Design Graphique</h3>
+                    <p>Création de flyers, affiches, cartes de visite, logos et autres supports de communication visuelle.</p>
+                    <p class="service-price">À partir de 3,000 HTG</p>
+                    <img src="images/ay.jpg" style="width:255px; height:135px; display:block; margin:auto" alt="Maintenance informatique">
+                    <a href="#" class="know-more-btn" data-service="design">En savoir plus</a>
+                </div>
+
+                <div class="service-card">
+                    <h3>Installation caméras</h3>
+                    <p>Installer les caméras DVR(a fil),IP( caméras sans fil),Caméras HD (images hautes résolution ).Installation et configuration</p>
+                    <p class="service-price">À partir de 15,000 HTG</p>
+                    <img src="images/at.jpg" style="width:220px; height:120px; display:block; margin:auto" alt="Installation de caméras">
+                    <a href="#" class="know-more-btn" data-service="cameras">En savoir plus</a>
+                </div>
+                  <div class="service-card">
+                    <h3>Formation en Informatique à distance et en presentiel</h3>
+                    <p>Formations privées en informatique de bureau, réseaux, excel, programmation et autres technologies.</p>
+                    <p class="service-price">À partir de 10,000 HTG</p>
+                      <img src="images/aq.jpg" style="width:220px; height:100px; display:block; margin:auto" alt="Formation informatique">
+                    <a href="#" class="know-more-btn" data-service="training">En savoir plus</a>
+                </div>
+                <div class="service-card">
+                    <h3>Consultation Technique</h3>
+                    <p>Conseils et accompagnement pour vos projets technologiques et transformation numérique.</p>
+                    <p class="service-price">À partir de 8,000 HTG</p>
+                                        <img src="images/ao.png" style="width:210px; height:200px; display:block; margin:auto" alt="Consultation technique">
+                    <a href="#" class="know-more-btn" data-service="consultation">En savoir plus</a>
+                </div>
+                             <div class="service-card">
+                    <h3>Installations et gestion de reseaux</h3>
+                    <p>nous installons,configurons et securisons des reseaux informatiques.Nous utilisons des systemes ethernet,cable,fibre,internet,lan etc</p>
+                    <p class="service-price">À partir de 20,000 HTG</p>
+                      <img src="images/ad.jpg" style="width:220px; height:130px; display:block; margin:auto" alt="Formation informatique">
+                    <a href="#" class="know-more-btn" data-service="reseau">En savoir plus</a>
+                </div>
+                             <div class="service-card">
+                    <h3>Vente de materiel Informatique</h3>
+                    <p>Nous avons des cables ,connecteurs,ordinateurs,disque dur,external etc.</p>
+                    <p class="service-price">À partir de 1,000 HTG</p>
+                      <img src="images/ak.jpg" style="width:220px; height:150px; display:block; margin:auto" alt="Formation informatique">
+                    <a href="#" class="know-more-btn" data-service="vente">En savoir plus</a>
+                </div>
+            </div>
+            
+            <div class="section-title" style="margin-top: 50px;">
+                <h2>Quelques Réalisations</h2>
+            </div>
+           
+                </div>
+                 <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 20px;">
+                <!-- Remplacement des vidéos par des images avec lecture au clic -->
+                <div class="video-thumbnail" data-video="images/ma.mp4">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'><rect width='400' height='400' fill='%231a1a3a'/><rect x='50' y='50' width='300' height='200' fill='%230a0a2a'/><circle cx='200' cy='150' r='40' fill='%2300f5ff'/><polygon points='180,140 180,160 200,150' fill='%231a1a3a'/><text x='200' y='300' font-family='Arial' font-size='20' text-anchor='middle' fill='%23e67e22'>Projet Application Mobile et web</text></svg>" 
+                         alt="Réalisation 1" loading="lazy">
+                    <div class="play-button"></div>
+                </div>
+                  <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 20px;">
+                <!-- Remplacement des vidéos par des images avec lecture au clic -->
+                <div class="video-thumbnail" data-video="images/ma.mp4">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'><rect width='400' height='400' fill='%231a1a3a'/><rect x='50' y='50' width='300' height='200' fill='%230a0a2a'/><circle cx='200' cy='150' r='40' fill='%2300f5ff'/><polygon points='180,140 180,160 200,150' fill='%231a1a3a'/><text x='200' y='300' font-family='Arial' font-size='20' text-anchor='middle' fill='%23e67e22'>Projet installation camers et maintenance</text></svg>" 
+                         alt="Réalisation 1" loading="lazy">
+                    <div class="play-button"></div>
+                </div>
+                 
+                </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal pour les détails des services -->
+    <div id="serviceModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 class="modal-title" id="modalServiceTitle">Titre du service</h2>
+            <div class="modal-body" id="modalServiceBody">
+                Contenu détaillé du service...
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal pour les vidéos -->
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <video id="modalVideo" controls width="100%">
+                Votre navigateur ne supporte pas la lecture de vidéos.
+            </video>
+        </div>
+    </div>
+
+    <!-- infos Section -->
+    <section class="info" id="info">
+        <div class="container">
+            <div class="section-title">
+                <h1 style="color:#ffffff">Notre histoire</h1>
+                <h4 style="color:#cd3beb">Découvrez qui nous sommes et notre engagement envers l'excellence</h4>
+                <p style="color:#13f70b">LA nova technologie est une entreprise haïtienne basée à Limonade, spécialisée dans les solutions informatiques innovantes. Depuis notre création, nous nous engageons à fournir des services de qualité supérieure avec une liste de services de qualites qui developpent avec le plus haut niveau de professionalisme qui aident nos clients à prospérer dans l'ère numérique avec une technologie futuriste.</p>              
+                <p style="color:#13f70b">Notre équipe de professionnels expérimentés travaille avec passion pour transformer vos défis technologiques en opportunités de croissance. Nous croyons que la technologie doit être accessible, abordable et efficace pour tous.</p>
+                
+                <h2 style="color:#ffffff; margin-top: 30px;">Nos Valeurs</h2>
+                <div style="margin-top: 20px;">
+                    <h3 style="color:#cd3beb">Innovation Constante</h3>
+                    <p style="color:#07b3df">Nous restons à la pointe de la technologie pour offrir les meilleures solutions à nos clients.</p>
+                </div>
+                <div style="margin-top: 20px;">
+                    <h3 style="color:#da0dc8">Qualité sans Compromis</h3>
+                    <p style="color:#07b3df">Chaque projet est traité avec le plus haut niveau de professionnalisme et d'attention aux détails.</p>
+                </div>
+                <div style="margin-top: 20px;">
+                    <h3 style="color:#cd3beb">Notre solution</h3>
+                    <p style="color:#07b3df">Transformer la technologie en vecteur de progrès pour les entreprises et les individus en Haïti et au-delà, en offrant des solutions innovantes, abordables et de haute qualité.</p>
+                </div>
+                <div style="margin-top: 20px;">
+                    <h3 style="color:#cd3beb">Notre Vision</h3>
+                    <p style="color:#07b3df">Être le partenaire technologique de confiance qui propulse chaque client vers le succès numérique et la prospérité dans l'économie mondiale.</p>
+                </div>
+                
+                <a href="#contact" class="btn" style="margin-top: 30px;">Contactez-nous</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nous Sommes Disponibles</h2>
+                <p>N'hésitez pas à nous contacter pour toute demande de service ou d'information suplémentaire</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Nos Coordonnées</h3>
+                    <div class="contact-details">
+                        <p><i>📍</i> Rue republicaine, Limonade, Haïti</p>
+                        <p><i>📞</i> Téléphone: +509 4010-4585</p>
+                        <p><i>💬</i> WhatsApp: +509 4010-4585</p>
+                        <p><i>✉️</i> Email: lanovatechnologie@gmail.com</p>
+                    </div>
+                    <div class="contact-buttons">
+                        <a href="https://wa.me/50940104585" class="whatsapp-btn" target="_blank">Nous contacter sur WhatsApp</a>
+                        <a href="mailto:lanovatechnologie@gmail.com" class="email-btn">Nous envoyer un email</a>
+                        <a href="https://www.facebook.com/lanovatechnologie" class="facebook-btn" target="_blank">Notre page Facebook</a>
+
+                    </div>   
+                        <section class="payment" id="payment">
+  <title>Modes de Paiement</title>
+  <style>
+    .paiement-section {
+      background: rgba(10, 10, 42, 0.7);
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 600px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .paiement-section h2 {
+      color: #2cecfa;
+    }
+    .mode {
+      margin: 15px 0;
+      padding: 10px;
+      border-left: 5px solid #fbff00;
+      background: #a50303;
+    }
+    .mode strong {
+      color: #c8ff00;
+    }
+  </style>
+  <div class="paiement-section">
+  <h2>Modes de Paiement Disponibles</h2>
+
+  <div class="mode">
+    <strong>NATCASH :</strong> Utilisez le service Natcash pour transférer le montant. Contact : <br>
+    Numéro : +509 4010-4585<br>
+    Nom : La Nova Technologie
+  </div>
+
+  <div class="mode">
+    <strong>BUH :</strong> Envoyez via BUH au :<br>
+    Nom : a communiquer<br>
+    Numéro : 27000060777
+  </div>
+  <div class="mode">
+    <strong>CPF,La caisse populaire fraternite :</strong><br>
+    Numéro : 32438<br>
+    nom : a communiquer 
+  </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Demande de Service</h3>
+                    <form id="serviceForm">
+                        <div class="form-group">
+                            <label for="name">Nom Complet</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Téléphone</label>
+                            <input type="tel" id="phone" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Services Demandés</label>
+                            <div class="services-checkbox">
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="web" name="services" value="web">
+                                    <label for="web">Site Web</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="mobile" name="services" value="mobile">
+                                    <label for="mobile">Application mobile</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="cameras" name="services" value="cameras">
+                                    <label for="cameras">Installation caméras surveillance</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="maintenance" name="services" value="maintenance">
+                                    <label for="maintenance">Maintenance</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="design" name="services" value="design">
+                                    <label for="design">Design Graphique</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="training" name="services" value="training">
+                                    <label for="training">Formation</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="consultation" name="services" value="consultation">
+                                    <label for="consultation">Consultation</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" class="form-control" placeholder="Décrivez votre projet ou demande..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Envoyer la Demande</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>LA Nova Technologie</h3>
+                    <p>Votre partenaire technologique de confiance en Haïti pour tous vos projets numériques.</p>
+                    <a href="https://www.facebook.com/lanovatechnologie" target="_blank">Suivez-nous sur Facebook</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Nos Services</h3>
+                    <a href="#services">Création de Site Web</a>
+                    <a href="#services">Applications Mobiles Web, commerciales, et autres</a>
+                    <a href="#services">Maintenance à Distance</a>
+                    <a href="#services">Design Graphique</a>
+                    <a href="#services">Installation caméras de surveillance</a>
+                    <a href="#services">Formation en Informatique</a>
+                      <a href="#services">Installations et gestion de reseaux</a>
+        <a href="#services">vente des materiels informatique</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <p>Rue republicaine, Limonade, Haïti</p>
+                    <p>Téléphone: +509 4010-4585</p>
+                    <p>WhatsApp: +509 4010-4585</p>
+                    <p>Email: lanovatechnologie@gmail.com</p>
+                      <p>facebook,:la nova technologie</p>
+                        <p>tiktok: lanovatechnologie</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 LA Nova Technologie. Tous droits réservés.</p>
+                                     <img src="images/1000074545.jpg" alt="LA Nova Technologie" class="logo-img">
+
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Détails des services pour la modal
+        const serviceDetails = {
+            web: {
+                title: "Création de Site Web",
+                content: `
+                    <p>Nous créons des sites web professionnels, esthétiques et entièrement responsifs qui s'adaptent parfaitement à tous les appareils (ordinateurs, tablettes, smartphones).</p>
+                    <h3>Nos services incluent :</h3>
+                    <ul>
+                        <li>Conception de sites vitrines</li>
+                        <li>Développement de sites e-commerce</li>
+                        <li>Création de blogs et sites institutionnels</li>
+                        <li>Optimisation SEO pour un meilleur référencement</li>
+                        <li>Intégration de systèmes de paiement en ligne</li>
+                        <li>Hébergement et maintenance continue</li>
+                    </ul>
+                    <p><strong>Tarifs :</strong> À partir de 25,000 HTG selon la complexité du projet</p>
+                `
+            },
+            app: {
+                title: "Création et Développement d'Applications",
+                content: `
+                    <p>Nous développons des applications mobiles, web et de bureau sur mesure pour répondre à vos besoins spécifiques.</p>
+                    <h3>Types d'applications :</h3>
+                    <ul>
+                        <li><strong>Applications mobiles :</strong> iOS et Android (natives et hybrides)</li>
+                        <li><strong>Applications web :</strong> Applications progressives (PWA) et applications web complètes</li>
+                        <li><strong>Applications de bureau :</strong> Pour Windows, macOS et Linux</li>
+                        <li><strong>Applications commerciales :</strong> Gestion, comptabilité, inventaire</li>
+                        <li><strong>Applications éducatives :</strong> Plateformes d'apprentissage, jeux éducatifs</li>
+                        <li><strong>Applications de divertissement :</strong> Jeux, loteries, paris sportifs</li>
+                    </ul>
+                    <p><strong>Tarifs :</strong> À partir de 50,000 HTG selon la complexité et les plateformes</p>
+                `
+            },
+            maintenance: {
+                title: "Maintenance à Distance ou Présentielle",
+                content: `
+                    <p>Nous offrons des services de maintenance technique pour assurer le bon fonctionnement de vos systèmes informatiques.</p>
+                    <h3>Nos services de maintenance :</h3>
+                    <ul>
+                        <li>Assistance technique à distance via AnyDesk, TeamViewer, Zoom</li>
+                        <li>Maintenance préventive et corrective</li>
+                        <li>Résolution de problèmes logiciels et matériels</li>
+                        <li>Installation et configuration de systèmes d'exploitation</li>
+                        <li>Nettoyage et optimisation des systèmes</li>
+                        <li>Sauvegarde et récupération de données</li>
+                        <li>Support technique en présentiel selon les besoins</li>
+                    </ul>
+                    <p><strong>Tarifs :</strong> À partir de 5,000 HTG selon la nature et la durée de l'intervention</p>
+                `
+            },
+            design: {
+                title: "Design Graphique",
+                content: `
+                    <p>Nous créons des designs visuels percutants pour renforcer votre identité de marque et votre communication.</p>
+                    <h3>Nos créations graphiques :</h3>
+                    <ul>
+                        <li>Logos et identités visuelles</li>
+                        <li>Cartes de visite, en-têtes de lettres</li>
+                        <li>Flyers, affiches, dépliants</li>
+                        <li>Bannières pour les réseaux sociaux</li>
+                        <li>Présentations PowerPoint professionnelles</li>
+                        <li>Maquettes de sites web et applications</li>
+                        <li>Design d'emballages et étiquettes</li>
+                    </ul>
+                    <p><strong>Tarifs :</strong> À partir de 3,000 HTG selon la complexité du design</p>
+                `
+            },
+            cameras: {
+                title: "Installation de Caméras de Surveillance",
+                content: `
+                    <p>Nous installons et configurons des systèmes de surveillance complets pour sécuriser vos locaux.</p>
+                    <h3>Types de caméras proposées :</h3>
+                    <ul>
+                        <li><strong>Caméras DVR :</strong> Systèmes filaires traditionnels, fiables et stables</li>
+                        <li><strong>Caméras IP :</strong> Systèmes sans fil offrant une flexibilité d'installation</li>
+                        <li><strong>Caméras HD :</strong> Images haute résolution pour une identification précise</li>
+                        <li><strong>Caméras avec vision nocturne :</strong> Surveillance 24h/24</li>
+                        <li><strong>Caméras PTZ :</strong> Pan-Tilt-Zoom pour une couverture étendue</li>
+                    </ul>
+                    <p>Nous assurons l'installation, la configuration et la formation à l'utilisation de votre système de surveillance.</p>
+                    <p><strong>Tarifs :</strong> À partir de 15,000 HTG selon le nombre de caméras et la complexité de l'installation</p>
+                `
+            },
+            training: {
+                title: "Formation en Informatique",
+                content: `
+                    <p>Nous proposons des formations informatiques adaptées à tous les niveaux, en présentiel ou à distance.</p>
+                    <h3>Domaines de formation :</h3>
+                    <ul>
+                        <li>Informatique de bureau (Windows, macOS)</li>
+                        <li>Suite Microsoft Office (Word, Excel, PowerPoint)</li>
+                        <li>Programmation et développement web</li>
+                        <li>Réseaux et cybersécurité</li>
+                        <li>Programmation et développement web</li>
+                        <li>Design graphique et multimédia</li>
+                        <li>Gestion de projets informatiques</li>
+                        <li>Formations sur mesure selon vos besoins spécifiques</li>
+                    </ul>
+                    <p>Nos formations sont dispensées par des professionnels expérimentés et peuvent être adaptées à votre rythme.</p>
+                    <p><strong>Tarifs :</strong> À partir de 10,000 HTG selon la durée et le contenu de la formation</p>
+                `
+            },
+          
+          consultation: {
+                title: "Consultation Technique",
+                content: `
+                    <p>Nous offrons des services de consultation pour vous accompagner dans vos projets technologiques.</p>
+                    <h3>Domaines de consultation :</h3>
+                    <ul>
+                        <li>Stratégie numérique et transformation digitale</li>
+                        <li>Audit et optimisation de systèmes existants</li>
+                        <li>Conseils en choix de technologies et d'infrastructures</li>
+                        <li>Accompagnement dans le développement de projets IT</li>
+                        <li>Planification de migration vers le cloud</li>
+                        <li>Optimisation de processus métier par la technologie</li>
+                        <li>Études de faisabilité pour nouveaux projets</li>
+                    </ul>
+                    <p>Nos consultants expérimentés vous aident à prendre les meilleures décisions technologiques pour votre entreprise.</p>
+                    <p><strong>Tarifs :</strong> À partir de 8,000 HTG selon la nature et la durée de la consultation</p>
+                `
+            },
+            vente: {
+                title: "vente de materiel informatique",
+                content: `
+                 <section id="materiels-info">
+  <h2>Liste de Matériels Informatiques</h2>
+  <table border="1" cellpadding="10" cellspacing="0">
+    <thead>
+      <tr>
+        <th>Matériel</th>
+        <th>Description</th>
+        <th>Prix estimé (gourdes)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Ordinateur portable</td>
+        <td>Utilisé pour les tâches mobiles et le travail personnel</td>
+        <td>35,000 - 50,000 </td>
+      </tr>
+      <tr>
+        <td>Unité centrale (PC)</td>
+        <td>Poste fixe de travail avec composants internes puissants</td>
+        <td>30,000 - 100,000</td>
+      </tr>
+      <tr>
+        <td>Disque dur (HDD/SSD)</td>
+        <td>Stockage de données</td>
+        <td>4000 - 7000 </td>
+      </tr>
+      <tr>
+        <td>Routeur Wi-Fi</td>
+        <td>Permet la connexion internet sans fil</td>
+        <td>2500 - 7000</td>
+      </tr>
+      <tr>
+        <td>Caméra de surveillance IP</td>
+        <td>Surveillance à distance avec accès réseau</td>
+        <td>30,000 - 100,000 </td>
+      </tr>
+      <tr>
+        <td>Connecteur(hdmi,vga,dvi)</td>
+        <td>prolongement cable </td>
+        <td>2 - 10 / unité</td>
+              <tr>
+        <td>Switch réseau</td>
+        <td>Distribue la connexion entre plusieurs appareils</td>
+        <td>2000 - 7000 </td>
+      </tr>
+      <tr>
+        <td>Connecteurs (RJ45, USB, HDMI,sata)</td>
+        <td>Interconnexion des périphériques</td>
+        <td>500 - 1500</td>
+      </tr>
+      <tr>
+        <td>Microprocesseur (CPU)</td>
+        <td>Cerveau de l’ordinateur</td>
+        <td>7,000 - 10,000 </td>
+      </tr>
+      <tr>
+        <td> imprimante termique</td>
+        <td>Impression de fiche de vente et borlette</td>
+        <td>12,000 - 16,000</td>
+      </tr>
+      <tr>
+        <td>memoire RAM </td>
+        <td>Vie données provisoire</td>
+        <td>4000 - 1500 </td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+
+                `
+            },
+                   reseau: {
+                title: "Installations et gestion de reseaux",
+                content: `
+                  <section id="types-reseaux">
+  <h2> Réseaux Informatiques nous pouvons installer</h2>
+  <ul>
+    <li>
+      <strong>LAN (Local Area Network)</strong> : Réseau local utilisé dans les maisons, bureaux ou écoles. Vitesse rapide et portée limitée.
+    </li>
+    <li>
+      <strong>WAN (Wide Area Network)</strong> : Réseau étendu couvrant une grande zone géographique, comme Internet.
+    </li>
+    <li>
+      <strong>MAN (Metropolitan Area Network)</strong> : Couvre une ville entière, .
+    </li>
+    <li>
+      <strong>WLAN (Wireless LAN)</strong> : Version sans fil du LAN, généralement basée sur le Wi-Fi.
+    </li>
+    <li>
+      <strong>VPN (Virtual Private Network)</strong> : Crée une connexion sécurisée via Internet entre un utilisateur et un réseau privé.
+    </li>
+    <li>
+      <strong>PAN (Personal Area Network)</strong> : Réseau personnel de courte portée, comme entre un téléphone et un autre apareil.
+    </li>
+  </ul>
+</section>
+                `
+            },
+        };
+
+        // Gestion de la modal des services
+        const modal = document.getElementById('serviceModal');
+        const modalTitle = document.getElementById('modalServiceTitle');
+        const modalBody = document.getElementById('modalServiceBody');
+        const closeModal = document.querySelectorAll('.close-modal');
+        const knowMoreBtns = document.querySelectorAll('.know-more-btn');
+
+        knowMoreBtns.forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const service = this.getAttribute('data-service');
+                
+                if (serviceDetails[service]) {
+                    modalTitle.textContent = serviceDetails[service].title;
+                    modalBody.innerHTML = serviceDetails[service].content;
+                    modal.style.display = 'block';
+                }
+            });
+        });
+
+        closeModal.forEach(btn => {
+            btn.addEventListener('click', function() {
+                modal.style.display = 'none';
+                document.getElementById('videoModal').style.display = 'none';
+            });
+        });
+
+        window.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+            if (e.target === document.getElementById('videoModal')) {
+                document.getElementById('videoModal').style.display = 'none';
+                document.getElementById('modalVideo').pause();
+            }
+        });
+
+        // Gestion des vidéos
+        const videoThumbnails = document.querySelectorAll('.video-thumbnail');
+        const videoModal = document.getElementById('videoModal');
+        const modalVideo = document.getElementById('modalVideo');
+
+        videoThumbnails.forEach(thumbnail => {
+            thumbnail.addEventListener('click', function() {
+                const videoSrc = this.getAttribute('data-video');
+                modalVideo.src = videoSrc;
+                videoModal.style.display = 'block';
+            });
+        });
+
+        // Form submission handling
+        document.getElementById('serviceForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const message = document.getElementById('message').value;
+            
+            // Get selected services
+            const selectedServices = [];
+            document.querySelectorAll('input[name="services"]:checked').forEach(checkbox => {
+                selectedServices.push(checkbox.value);
+            });
+            
+            // Create WhatsApp message
+            const whatsappMessage = `Bonjour, je m'appelle ${name}. Je suis intéressé(e) par les services suivants: ${selectedServices.join(', ')}. ${message}. Mon numéro est ${phone} et mon email est ${email}.`;
+            
+            // Encode message for URL
+            const encodedMessage = encodeURIComponent(whatsappMessage);
+            
+            // Open WhatsApp with pre-filled message
+            window.open(`https://wa.me/50940104585?text=${encodedMessage}`, '_blank');
+            
+            // Reset form
+            document.getElementById('serviceForm').reset();
+            
+            // Show success message
+            alert('Votre demande a été envoyée avec succès! Vous allez être redirigé vers WhatsApp.');
+        });
+    </script>
+</body>
+</html>
