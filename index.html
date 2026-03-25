@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LA Nova Technologie - Services Informatiques en Haïti</title>
+    <title>LA Nova Technologie - Solutions Innovantes en Haïti</title>
     <style>
         :root {
             --vert: #2ecc71;
@@ -138,8 +138,8 @@
             transform: translateY(-3px);
         }
         
-        /* Services Section */
-        .services {
+        /* Services & Apps Section */
+        .services, .apps-showcase {
             padding: 80px 0;
             background: rgba(10, 10, 42, 0.7);
         }
@@ -216,6 +216,7 @@
             transition: all 0.3s ease;
             border: 2px solid var(--cyan-futuriste);
             margin-top: 15px;
+            cursor: pointer;
         }
         
         .know-more-btn:hover {
@@ -223,7 +224,7 @@
             color: var(--bleu-futuriste);
         }
         
-        /* Modal pour les détails des services */
+        /* Modal pour les détails */
         .modal {
             display: none;
             position: fixed;
@@ -503,7 +504,6 @@
             font-size: 0.9rem;
         }
         
-        /* Responsive */
         @media (max-width: 768px) {
             .header-content {
                 flex-direction: column;
@@ -532,33 +532,27 @@
                 width: 95%;
                 margin: 10% auto;
             }
-            
-            .contact-buttons {
-                flex-direction: column;
-            }
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
     <header>
         <div class="container">
             <div class="header-content">
                 <div class="logo">
                     <a href="#accueil">
-                        <!-- Image optimisée avec lazy loading -->
-                                                     <img src="images/1000074545.jpg" alt="LA Nova Technologie" class="logo-img">
-
+                        <img src="images/1000074545.jpg" alt="LA Nova Technologie" class="logo-img">
                     </a>
                     <h1>LA Nova Technologie</h1>
                 </div>
                 <nav>
                     <ul>
                         <li><a href="#accueil">Accueil</a></li>
+                        <li><a href="#applications">Applications</a></li>
                         <li><a href="#services">Services</a></li>
                         <li><a href="#info">À propos</a></li>
                         <li><a href="#contact">Contact</a></li>
-                         <li><a href="#payment">Paiement</a></li>
+                        <li><a href="#payment">Paiement</a></li>
                     </ul>
                 </nav>
             </div>
@@ -574,6 +568,63 @@
         </div>
     </section>
 
+    <!-- SECTION APPLICATIONS (MISE EN AVANT) -->
+    <section class="apps-showcase" id="applications">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nos Applications Innovantes</h2>
+                <p>Découvrez nos solutions logicielles sur mesure, conçues pour répondre aux besoins spécifiques des entreprises haïtiennes.</p>
+            </div>
+            <div class="services-grid">
+                <!-- LOTATO : Gestion de loterie / borlette -->
+                <div class="service-card">
+                    <h3>LOTATO - Gestion de Loterie</h3>
+                    <img src="images/im1.png" alt="LOTATO" style="width:100%; height:auto; border-radius:5px; margin-bottom:15px;">
+                    <p>Sistèm konplè pou jesyon bòlèt, ki pèmèt ajan, sipèvize, direktè ak pwopriyetè kontwole tout operasyon an tan reyèl.</p>
+                    <button class="know-more-btn" data-app-detail="lotato">plis detay</button>
+                </div>
+                <!-- NOVACARE : Gestion hospitalière connectée -->
+                <div class="service-card">
+                    <h3>NOVACARE - Gestion Hospitalière</h3>
+                    <img src="images/im2.png" alt="NOVACARE" style="width:100%; height:auto; border-radius:5px; margin-bottom:15px;">
+                    <p>Platfòm ki konekte tout sèvis lopital la. Jesyon pasyan rapid, ak aksè aleka pou doktè ak administratè.</p>
+                    <button class="know-more-btn" data-app-detail="novacare">plis detay</button>
+                </div>
+                <!-- DEBESTA : Suivi de véhicules en temps réel -->
+                <div class="service-card">
+                    <h3>DEBESTA - Suivi Automobile</h3>
+                    <img src="images/im3.png" alt="DEBESTA" style="width:100%; height:auto; border-radius:5px; margin-bottom:15px;">
+                    <p>Swiv machin an tan reyèl. Jesyon flòt otomobil, lokalizasyon presiz, rapò deplasman ak alèt sekirite.</p>
+                    <button class="know-more-btn" data-app-detail="debestra">plis detay</button>
+                </div>
+                          <!-- BUSITECH : GESTION DE STOCK ET DE VENTES -->
+                <div class="service-card">
+                    <h3>BUSITECH - jere biznis ou</h3>
+                    <img src="images/im6.png" alt="busitech" style="width:100%; height:auto; border-radius:5px; margin-bottom:15px;">
+                    <p>jere estòk ak vant yo.kontrole machandiz ak lajan ki antre e soti nan biznis lan.Verifye kijan lavant lan ye menm lè ou pa la </p>
+                    <button class="know-more-btn" data-app-detail="busitech">plis detay</button>
+                </div>
+                <!-- SEF : Système Éducation Futuriste -->
+                <div class="service-card">
+                    <h3>SEF - Éducation Futuriste</h3>
+                    <img src="images/im4.png" alt="SEF" style="width:100%; height:auto; border-radius:5px; margin-bottom:15px;">
+                    <p>Jesyon lekòl total: nòt, prezans, kominikasyon paran-pwofesè, bibliyotèk dijital, ak aksè aleka.</p>
+                    <button class="know-more-btn" data-app-detail="sef">plis detay</button>
+                </div>
+                <!-- DATPHAR : Gestion de pharmacie -->
+                <div class="service-card">
+                    <h3>DATPHAR - Gestion Pharmaceutique</h3>
+                    <img src="images/im5.png" alt="DATPHAR" style="width:100%; height:auto; border-radius:5px; margin-bottom:15px;">
+                    <p>Jesyon famasi entelijan: estòk, dat ekspirasyon, vant, resèt medikal, rapò finansye ak odinatè.</p>
+                    <button class="know-more-btn" data-app-detail="datphar">plis detay</button>
+                </div>
+            </div>
+            <div class="section-title" style="margin-top: 40px;">
+                <p>Chak aplikasyon ka adapte selon bezwen ou. Nou bay fòmasyon ak sipò teknik apre enstalasyon.</p>
+            </div>
+        </div>
+    </section>
+
     <!-- Services Section -->
     <section class="services" id="services">
         <div class="container">
@@ -586,8 +637,7 @@
                     <h3>Création de Site Web</h3>
                     <p>Conception et développement de sites web professionnels, esthetique,responsifs et optimisés pour le référencement.</p>
                     <p class="service-price">À partir de 25,000 HTG</p>
-                    <!-- Image SVG légère en remplacement -->
-                         <img src="images/al.jpg" style="width:310px; height:180px; display:block; margin:auto" alt="Création de site web">
+                    <img src="images/al.jpg" style="width:310px; height:180px; display:block; margin:auto" alt="Création de site web">
                     <a href="#" class="know-more-btn" data-service="web">En savoir plus</a>
                 </div>
                 <div class="service-card">
@@ -598,7 +648,19 @@
                         <li>lotterie - paris - sportif - etc</li>
                     </ul>
                     <p>Développement d'applications mobiles (iOS, Android) web et web progressive jeux et applications adaptees selon vos besoins.</p>
-                          <img src="images/am.jpg" style="width:200px; height:100px; display:block; margin:auto" alt="Développement d'applications">
+                    <img src="images/am.jpg" style="width:200px; height:100px; display:block; margin:auto" alt="Développement d'applications">
+                    <p class="service-price">À partir de 50,000 HTG</p>
+                    <a href="#" class="know-more-btn" data-service="app">En savoir plus</a>
+                </div>
+                <div class="service-card">
+                    <h3>Vente et location des Applications</h3>
+                    <ul>
+                        <li>mobile - Web - bureau - commerciales</li>
+                        <li>natives - hybrides - sociales - educatives</li>
+                        <li>lotterie - paris - sportif - etc</li>
+                    </ul>
+                    <p>Développement d'applications mobiles (iOS, Android) web et web progressive jeux et applications adaptees selon vos besoins.</p>
+                    <img src="images/am.jpg" style="width:200px; height:100px; display:block; margin:auto" alt="Développement d'applications">
                     <p class="service-price">À partir de 50,000 HTG</p>
                     <a href="#" class="know-more-btn" data-service="app">En savoir plus</a>
                 </div>
@@ -616,7 +678,6 @@
                     <img src="images/ay.jpg" style="width:255px; height:135px; display:block; margin:auto" alt="Maintenance informatique">
                     <a href="#" class="know-more-btn" data-service="design">En savoir plus</a>
                 </div>
-
                 <div class="service-card">
                     <h3>Installation caméras</h3>
                     <p>Installer les caméras DVR(a fil),IP( caméras sans fil),Caméras HD (images hautes résolution ).Installation et configuration</p>
@@ -624,32 +685,32 @@
                     <img src="images/at.jpg" style="width:220px; height:120px; display:block; margin:auto" alt="Installation de caméras">
                     <a href="#" class="know-more-btn" data-service="cameras">En savoir plus</a>
                 </div>
-                  <div class="service-card">
+                <div class="service-card">
                     <h3>Formation en Informatique à distance et en presentiel</h3>
                     <p>Formations privées en informatique de bureau, réseaux, excel, programmation et autres technologies.</p>
                     <p class="service-price">À partir de 10,000 HTG</p>
-                      <img src="images/aq.jpg" style="width:220px; height:100px; display:block; margin:auto" alt="Formation informatique">
+                    <img src="images/aq.jpg" style="width:220px; height:100px; display:block; margin:auto" alt="Formation informatique">
                     <a href="#" class="know-more-btn" data-service="training">En savoir plus</a>
                 </div>
                 <div class="service-card">
                     <h3>Consultation Technique</h3>
                     <p>Conseils et accompagnement pour vos projets technologiques et transformation numérique.</p>
                     <p class="service-price">À partir de 8,000 HTG</p>
-                                        <img src="images/ao.png" style="width:210px; height:200px; display:block; margin:auto" alt="Consultation technique">
+                    <img src="images/ao.png" style="width:210px; height:200px; display:block; margin:auto" alt="Consultation technique">
                     <a href="#" class="know-more-btn" data-service="consultation">En savoir plus</a>
                 </div>
-                             <div class="service-card">
+                <div class="service-card">
                     <h3>Installations et gestion de reseaux</h3>
                     <p>nous installons,configurons et securisons des reseaux informatiques.Nous utilisons des systemes ethernet,cable,fibre,internet,lan etc</p>
                     <p class="service-price">À partir de 20,000 HTG</p>
-                      <img src="images/ad.jpg" style="width:220px; height:130px; display:block; margin:auto" alt="Formation informatique">
+                    <img src="images/ad.jpg" style="width:220px; height:130px; display:block; margin:auto" alt="Formation informatique">
                     <a href="#" class="know-more-btn" data-service="reseau">En savoir plus</a>
                 </div>
-                             <div class="service-card">
+                <div class="service-card">
                     <h3>Vente de materiel Informatique</h3>
                     <p>Nous avons des cables ,connecteurs,ordinateurs,disque dur,external etc.</p>
                     <p class="service-price">À partir de 1,000 HTG</p>
-                      <img src="images/ak.jpg" style="width:220px; height:150px; display:block; margin:auto" alt="Formation informatique">
+                    <img src="images/ak.jpg" style="width:220px; height:150px; display:block; margin:auto" alt="Formation informatique">
                     <a href="#" class="know-more-btn" data-service="vente">En savoir plus</a>
                 </div>
             </div>
@@ -657,37 +718,28 @@
             <div class="section-title" style="margin-top: 50px;">
                 <h2>Quelques Réalisations</h2>
             </div>
-           
-                </div>
-                 <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 20px;">
-                <!-- Remplacement des vidéos par des images avec lecture au clic -->
+            <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 20px;">
                 <div class="video-thumbnail" data-video="images/ma.mp4">
                     <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'><rect width='400' height='400' fill='%231a1a3a'/><rect x='50' y='50' width='300' height='200' fill='%230a0a2a'/><circle cx='200' cy='150' r='40' fill='%2300f5ff'/><polygon points='180,140 180,160 200,150' fill='%231a1a3a'/><text x='200' y='300' font-family='Arial' font-size='20' text-anchor='middle' fill='%23e67e22'>Projet Application Mobile et web</text></svg>" 
                          alt="Réalisation 1" loading="lazy">
                     <div class="play-button"></div>
                 </div>
-                  <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 20px;">
-                <!-- Remplacement des vidéos par des images avec lecture au clic -->
                 <div class="video-thumbnail" data-video="images/ma.mp4">
                     <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'><rect width='400' height='400' fill='%231a1a3a'/><rect x='50' y='50' width='300' height='200' fill='%230a0a2a'/><circle cx='200' cy='150' r='40' fill='%2300f5ff'/><polygon points='180,140 180,160 200,150' fill='%231a1a3a'/><text x='200' y='300' font-family='Arial' font-size='20' text-anchor='middle' fill='%23e67e22'>Projet installation camers et maintenance</text></svg>" 
-                         alt="Réalisation 1" loading="lazy">
+                         alt="Réalisation 2" loading="lazy">
                     <div class="play-button"></div>
-                </div>
-                 
-                </div>
-
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Modal pour les détails des services -->
+    <!-- Modal unique pour services & applications -->
     <div id="serviceModal" class="modal">
         <div class="modal-content">
             <span class="close-modal">&times;</span>
-            <h2 class="modal-title" id="modalServiceTitle">Titre du service</h2>
+            <h2 class="modal-title" id="modalServiceTitle">Titre</h2>
             <div class="modal-body" id="modalServiceBody">
-                Contenu détaillé du service...
+                Contenu détaillé...
             </div>
         </div>
     </div>
@@ -702,7 +754,7 @@
         </div>
     </div>
 
-    <!-- infos Section -->
+    <!-- À propos -->
     <section class="info" id="info">
         <div class="container">
             <div class="section-title">
@@ -712,23 +764,10 @@
                 <p style="color:#13f70b">Notre équipe de professionnels expérimentés travaille avec passion pour transformer vos défis technologiques en opportunités de croissance. Nous croyons que la technologie doit être accessible, abordable et efficace pour tous.</p>
                 
                 <h2 style="color:#ffffff; margin-top: 30px;">Nos Valeurs</h2>
-                <div style="margin-top: 20px;">
-                    <h3 style="color:#cd3beb">Innovation Constante</h3>
-                    <p style="color:#07b3df">Nous restons à la pointe de la technologie pour offrir les meilleures solutions à nos clients.</p>
-                </div>
-                <div style="margin-top: 20px;">
-                    <h3 style="color:#da0dc8">Qualité sans Compromis</h3>
-                    <p style="color:#07b3df">Chaque projet est traité avec le plus haut niveau de professionnalisme et d'attention aux détails.</p>
-                </div>
-                <div style="margin-top: 20px;">
-                    <h3 style="color:#cd3beb">Notre solution</h3>
-                    <p style="color:#07b3df">Transformer la technologie en vecteur de progrès pour les entreprises et les individus en Haïti et au-delà, en offrant des solutions innovantes, abordables et de haute qualité.</p>
-                </div>
-                <div style="margin-top: 20px;">
-                    <h3 style="color:#cd3beb">Notre Vision</h3>
-                    <p style="color:#07b3df">Être le partenaire technologique de confiance qui propulse chaque client vers le succès numérique et la prospérité dans l'économie mondiale.</p>
-                </div>
-                
+                <div><h3 style="color:#cd3beb">Innovation Constante</h3><p style="color:#07b3df">Nous restons à la pointe de la technologie pour offrir les meilleures solutions à nos clients.</p></div>
+                <div><h3 style="color:#da0dc8">Qualité sans Compromis</h3><p style="color:#07b3df">Chaque projet est traité avec le plus haut niveau de professionnalisme et d'attention aux détails.</p></div>
+                <div><h3 style="color:#cd3beb">Notre solution</h3><p style="color:#07b3df">Transformer la technologie en vecteur de progrès pour les entreprises et les individus en Haïti et au-delà, en offrant des solutions innovantes, abordables et de haute qualité.</p></div>
+                <div><h3 style="color:#cd3beb">Notre Vision</h3><p style="color:#07b3df">Être le partenaire technologique de confiance qui propulse chaque client vers le succès numérique et la prospérité dans l'économie mondiale.</p></div>
                 <a href="#contact" class="btn" style="margin-top: 30px;">Contactez-nous</a>
             </div>
         </div>
@@ -745,7 +784,7 @@
                 <div class="contact-info">
                     <h3>Nos Coordonnées</h3>
                     <div class="contact-details">
-                        <p><i>📍</i> Rue republicaine, Limonade, Haïti</p>
+                        <p><i>📍</i> Rue republicaine, Limonade, Haïti,rue 14 k-l cap-h</p>
                         <p><i>📞</i> Téléphone: +509 4010-4585</p>
                         <p><i>💬</i> WhatsApp: +509 4010-4585</p>
                         <p><i>✉️</i> Email: lanovatechnologie@gmail.com</p>
@@ -754,106 +793,35 @@
                         <a href="https://wa.me/50940104585" class="whatsapp-btn" target="_blank">Nous contacter sur WhatsApp</a>
                         <a href="mailto:lanovatechnologie@gmail.com" class="email-btn">Nous envoyer un email</a>
                         <a href="https://www.facebook.com/lanovatechnologie" class="facebook-btn" target="_blank">Notre page Facebook</a>
-
-                    </div>   
-                        <section class="payment" id="payment">
-  <title>Modes de Paiement</title>
-  <style>
-    .paiement-section {
-      background: rgba(10, 10, 42, 0.7);
-      padding: 20px;
-      border-radius: 8px;
-      max-width: 600px;
-      margin: auto;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    .paiement-section h2 {
-      color: #2cecfa;
-    }
-    .mode {
-      margin: 15px 0;
-      padding: 10px;
-      border-left: 5px solid #fbff00;
-      background: #a50303;
-    }
-    .mode strong {
-      color: #c8ff00;
-    }
-  </style>
-  <div class="paiement-section">
-  <h2>Modes de Paiement Disponibles</h2>
-
-  <div class="mode">
-    <strong>NATCASH :</strong> Utilisez le service Natcash pour transférer le montant. Contact : <br>
-    Numéro : +509 4010-4585<br>
-    Nom : La Nova Technologie
-  </div>
-
-  <div class="mode">
-    <strong>BUH :</strong> Envoyez via BUH au :<br>
-    Nom : a communiquer<br>
-    Numéro : 27000060777
-  </div>
-  <div class="mode">
-    <strong>CPF,La caisse populaire fraternite :</strong><br>
-    Numéro : 32438<br>
-    nom : a communiquer 
-  </div>
                     </div>
+                    <section class="payment" id="payment">
+                        <div class="paiement-section" style="background: rgba(10, 10, 42, 0.7); padding: 20px; border-radius: 8px; max-width: 600px; margin: 20px auto 0;">
+                            <h2 style="color: #2cecfa;">Modes de Paiement Disponibles</h2>
+                            <div class="mode" style="margin: 15px 0; padding: 10px; border-left: 5px solid #fbff00; background: #a50303;"><strong>NATCASH :</strong> Numéro : +509 4010-4585<br>Nom : La Nova Technologie</div>
+                            <div class="mode" style="margin: 15px 0; padding: 10px; border-left: 5px solid #fbff00; background: #a50303;"><strong>BUH :</strong> Numéro : 27000060777</div>
+                            <div class="mode" style="margin: 15px 0; padding: 10px; border-left: 5px solid #fbff00; background: #a50303;"><strong>CPF, La caisse populaire fraternite :</strong> Numéro : 32438</div>
+                        </div>
+                    </section>
                 </div>
                 <div class="contact-form">
                     <h3>Demande de Service</h3>
                     <form id="serviceForm">
-                        <div class="form-group">
-                            <label for="name">Nom Complet</label>
-                            <input type="text" id="name" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Téléphone</label>
-                            <input type="tel" id="phone" class="form-control" required>
-                        </div>
-
+                        <div class="form-group"><label for="name">Nom Complet</label><input type="text" id="name" class="form-control" required></div>
+                        <div class="form-group"><label for="email">Email</label><input type="email" id="email" class="form-control" required></div>
+                        <div class="form-group"><label for="phone">Téléphone</label><input type="tel" id="phone" class="form-control" required></div>
                         <div class="form-group">
                             <label>Services Demandés</label>
                             <div class="services-checkbox">
-                                <div class="checkbox-item">
-                                    <input type="checkbox" id="web" name="services" value="web">
-                                    <label for="web">Site Web</label>
-                                </div>
-                                <div class="checkbox-item">
-                                    <input type="checkbox" id="mobile" name="services" value="mobile">
-                                    <label for="mobile">Application mobile</label>
-                                </div>
-                                <div class="checkbox-item">
-                                    <input type="checkbox" id="cameras" name="services" value="cameras">
-                                    <label for="cameras">Installation caméras surveillance</label>
-                                </div>
-                                <div class="checkbox-item">
-                                    <input type="checkbox" id="maintenance" name="services" value="maintenance">
-                                    <label for="maintenance">Maintenance</label>
-                                </div>
-                                <div class="checkbox-item">
-                                    <input type="checkbox" id="design" name="services" value="design">
-                                    <label for="design">Design Graphique</label>
-                                </div>
-                                <div class="checkbox-item">
-                                    <input type="checkbox" id="training" name="services" value="training">
-                                    <label for="training">Formation</label>
-                                </div>
-                                <div class="checkbox-item">
-                                    <input type="checkbox" id="consultation" name="services" value="consultation">
-                                    <label for="consultation">Consultation</label>
-                                </div>
+                                <div class="checkbox-item"><input type="checkbox" id="web" name="services" value="web"><label for="web">Site Web</label></div>
+                                <div class="checkbox-item"><input type="checkbox" id="mobile" name="services" value="mobile"><label for="mobile">Application mobile</label></div>
+                                <div class="checkbox-item"><input type="checkbox" id="cameras" name="services" value="cameras"><label for="cameras">Caméras</label></div>
+                                <div class="checkbox-item"><input type="checkbox" id="maintenance" name="services" value="maintenance"><label for="maintenance">Maintenance</label></div>
+                                <div class="checkbox-item"><input type="checkbox" id="design" name="services" value="design"><label for="design">Design Graphique</label></div>
+                                <div class="checkbox-item"><input type="checkbox" id="training" name="services" value="training"><label for="training">Formation</label></div>
+                                <div class="checkbox-item"><input type="checkbox" id="consultation" name="services" value="consultation"><label for="consultation">Consultation</label></div>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" class="form-control" placeholder="Décrivez votre projet ou demande..." required></textarea>
-                        </div>
+                        <div class="form-group"><label for="message">Message</label><textarea id="message" class="form-control" placeholder="Décrivez votre projet..." required></textarea></div>
                         <button type="submit" class="btn">Envoyer la Demande</button>
                     </form>
                 </div>
@@ -861,293 +829,130 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-column">
-                    <h3>LA Nova Technologie</h3>
-                    <p>Votre partenaire technologique de confiance en Haïti pour tous vos projets numériques.</p>
-                    <a href="https://www.facebook.com/lanovatechnologie" target="_blank">Suivez-nous sur Facebook</a>
-                </div>
-                <div class="footer-column">
-                    <h3>Nos Services</h3>
-                    <a href="#services">Création de Site Web</a>
-                    <a href="#services">Applications Mobiles Web, commerciales, et autres</a>
-                    <a href="#services">Maintenance à Distance</a>
-                    <a href="#services">Design Graphique</a>
-                    <a href="#services">Installation caméras de surveillance</a>
-                    <a href="#services">Formation en Informatique</a>
-                      <a href="#services">Installations et gestion de reseaux</a>
-        <a href="#services">vente des materiels informatique</a>
-                </div>
-                <div class="footer-column">
-                    <h3>Contact</h3>
-                    <p>Rue republicaine, Limonade, Haïti</p>
-                    <p>Téléphone: +509 4010-4585</p>
-                    <p>WhatsApp: +509 4010-4585</p>
-                    <p>Email: lanovatechnologie@gmail.com</p>
-                      <p>facebook,:la nova technologie</p>
-                        <p>tiktok: lanovatechnologie</p>
-                </div>
+                <div class="footer-column"><h3>LA Nova Technologie</h3><p>Votre partenaire technologique de confiance en Haïti.</p><a href="https://www.facebook.com/lanovatechnologie" target="_blank">Facebook</a></div>
+                <div class="footer-column"><h3>Nos Services</h3><a href="#services">Création Site Web</a><a href="#services">Applications</a><a href="#services">Maintenance</a><a href="#services">Design Graphique</a><a href="#services">Installation caméras</a><a href="#services">Formation</a></div>
+                <div class="footer-column"><h3>Contact</h3><p>Rue republicaine, Limonade</p><p>+509 4010-4585</p><p>lanovatechnologie@gmail.com</p></div>
             </div>
-            <div class="copyright">
-                <p>&copy; 2023 LA Nova Technologie. Tous droits réservés.</p>
-                                     <img src="images/1000074545.jpg" alt="LA Nova Technologie" class="logo-img">
-
-            </div>
+            <div class="copyright"><p>&copy; 2025 LA Nova Technologie. Tous droits réservés.</p><img src="images/1000074545.jpg" alt="LA Nova Technologie" class="logo-img"></div>
         </div>
     </footer>
 
     <script>
-        // Détails des services pour la modal
+        // Détails des services (existants)
         const serviceDetails = {
-            web: {
-                title: "Création de Site Web",
-                content: `
-                    <p>Nous créons des sites web professionnels, esthétiques et entièrement responsifs qui s'adaptent parfaitement à tous les appareils (ordinateurs, tablettes, smartphones).</p>
-                    <h3>Nos services incluent :</h3>
-                    <ul>
-                        <li>Conception de sites vitrines</li>
-                        <li>Développement de sites e-commerce</li>
-                        <li>Création de blogs et sites institutionnels</li>
-                        <li>Optimisation SEO pour un meilleur référencement</li>
-                        <li>Intégration de systèmes de paiement en ligne</li>
-                        <li>Hébergement et maintenance continue</li>
-                    </ul>
-                    <p><strong>Tarifs :</strong> À partir de 25,000 HTG selon la complexité du projet</p>
-                `
-            },
-            app: {
-                title: "Création et Développement d'Applications",
-                content: `
-                    <p>Nous développons des applications mobiles, web et de bureau sur mesure pour répondre à vos besoins spécifiques.</p>
-                    <h3>Types d'applications :</h3>
-                    <ul>
-                        <li><strong>Applications mobiles :</strong> iOS et Android (natives et hybrides)</li>
-                        <li><strong>Applications web :</strong> Applications progressives (PWA) et applications web complètes</li>
-                        <li><strong>Applications de bureau :</strong> Pour Windows, macOS et Linux</li>
-                        <li><strong>Applications commerciales :</strong> Gestion, comptabilité, inventaire</li>
-                        <li><strong>Applications éducatives :</strong> Plateformes d'apprentissage, jeux éducatifs</li>
-                        <li><strong>Applications de divertissement :</strong> Jeux, loteries, paris sportifs</li>
-                    </ul>
-                    <p><strong>Tarifs :</strong> À partir de 50,000 HTG selon la complexité et les plateformes</p>
-                `
-            },
-            maintenance: {
-                title: "Maintenance à Distance ou Présentielle",
-                content: `
-                    <p>Nous offrons des services de maintenance technique pour assurer le bon fonctionnement de vos systèmes informatiques.</p>
-                    <h3>Nos services de maintenance :</h3>
-                    <ul>
-                        <li>Assistance technique à distance via AnyDesk, TeamViewer, Zoom</li>
-                        <li>Maintenance préventive et corrective</li>
-                        <li>Résolution de problèmes logiciels et matériels</li>
-                        <li>Installation et configuration de systèmes d'exploitation</li>
-                        <li>Nettoyage et optimisation des systèmes</li>
-                        <li>Sauvegarde et récupération de données</li>
-                        <li>Support technique en présentiel selon les besoins</li>
-                    </ul>
-                    <p><strong>Tarifs :</strong> À partir de 5,000 HTG selon la nature et la durée de l'intervention</p>
-                `
-            },
-            design: {
-                title: "Design Graphique",
-                content: `
-                    <p>Nous créons des designs visuels percutants pour renforcer votre identité de marque et votre communication.</p>
-                    <h3>Nos créations graphiques :</h3>
-                    <ul>
-                        <li>Logos et identités visuelles</li>
-                        <li>Cartes de visite, en-têtes de lettres</li>
-                        <li>Flyers, affiches, dépliants</li>
-                        <li>Bannières pour les réseaux sociaux</li>
-                        <li>Présentations PowerPoint professionnelles</li>
-                        <li>Maquettes de sites web et applications</li>
-                        <li>Design d'emballages et étiquettes</li>
-                    </ul>
-                    <p><strong>Tarifs :</strong> À partir de 3,000 HTG selon la complexité du design</p>
-                `
-            },
-            cameras: {
-                title: "Installation de Caméras de Surveillance",
-                content: `
-                    <p>Nous installons et configurons des systèmes de surveillance complets pour sécuriser vos locaux.</p>
-                    <h3>Types de caméras proposées :</h3>
-                    <ul>
-                        <li><strong>Caméras DVR :</strong> Systèmes filaires traditionnels, fiables et stables</li>
-                        <li><strong>Caméras IP :</strong> Systèmes sans fil offrant une flexibilité d'installation</li>
-                        <li><strong>Caméras HD :</strong> Images haute résolution pour une identification précise</li>
-                        <li><strong>Caméras avec vision nocturne :</strong> Surveillance 24h/24</li>
-                        <li><strong>Caméras PTZ :</strong> Pan-Tilt-Zoom pour une couverture étendue</li>
-                    </ul>
-                    <p>Nous assurons l'installation, la configuration et la formation à l'utilisation de votre système de surveillance.</p>
-                    <p><strong>Tarifs :</strong> À partir de 15,000 HTG selon le nombre de caméras et la complexité de l'installation</p>
-                `
-            },
-            training: {
-                title: "Formation en Informatique",
-                content: `
-                    <p>Nous proposons des formations informatiques adaptées à tous les niveaux, en présentiel ou à distance.</p>
-                    <h3>Domaines de formation :</h3>
-                    <ul>
-                        <li>Informatique de bureau (Windows, macOS)</li>
-                        <li>Suite Microsoft Office (Word, Excel, PowerPoint)</li>
-                        <li>Programmation et développement web</li>
-                        <li>Réseaux et cybersécurité</li>
-                        <li>Programmation et développement web</li>
-                        <li>Design graphique et multimédia</li>
-                        <li>Gestion de projets informatiques</li>
-                        <li>Formations sur mesure selon vos besoins spécifiques</li>
-                    </ul>
-                    <p>Nos formations sont dispensées par des professionnels expérimentés et peuvent être adaptées à votre rythme.</p>
-                    <p><strong>Tarifs :</strong> À partir de 10,000 HTG selon la durée et le contenu de la formation</p>
-                `
-            },
-          
-          consultation: {
-                title: "Consultation Technique",
-                content: `
-                    <p>Nous offrons des services de consultation pour vous accompagner dans vos projets technologiques.</p>
-                    <h3>Domaines de consultation :</h3>
-                    <ul>
-                        <li>Stratégie numérique et transformation digitale</li>
-                        <li>Audit et optimisation de systèmes existants</li>
-                        <li>Conseils en choix de technologies et d'infrastructures</li>
-                        <li>Accompagnement dans le développement de projets IT</li>
-                        <li>Planification de migration vers le cloud</li>
-                        <li>Optimisation de processus métier par la technologie</li>
-                        <li>Études de faisabilité pour nouveaux projets</li>
-                    </ul>
-                    <p>Nos consultants expérimentés vous aident à prendre les meilleures décisions technologiques pour votre entreprise.</p>
-                    <p><strong>Tarifs :</strong> À partir de 8,000 HTG selon la nature et la durée de la consultation</p>
-                `
-            },
-            vente: {
-                title: "vente de materiel informatique",
-                content: `
-                 <section id="materiels-info">
-  <h2>Liste de Matériels Informatiques</h2>
-  <table border="1" cellpadding="10" cellspacing="0">
-    <thead>
-      <tr>
-        <th>Matériel</th>
-        <th>Description</th>
-        <th>Prix estimé (gourdes)</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Ordinateur portable</td>
-        <td>Utilisé pour les tâches mobiles et le travail personnel</td>
-        <td>35,000 - 50,000 </td>
-      </tr>
-      <tr>
-        <td>Unité centrale (PC)</td>
-        <td>Poste fixe de travail avec composants internes puissants</td>
-        <td>30,000 - 100,000</td>
-      </tr>
-      <tr>
-        <td>Disque dur (HDD/SSD)</td>
-        <td>Stockage de données</td>
-        <td>4000 - 7000 </td>
-      </tr>
-      <tr>
-        <td>Routeur Wi-Fi</td>
-        <td>Permet la connexion internet sans fil</td>
-        <td>2500 - 7000</td>
-      </tr>
-      <tr>
-        <td>Caméra de surveillance IP</td>
-        <td>Surveillance à distance avec accès réseau</td>
-        <td>30,000 - 100,000 </td>
-      </tr>
-      <tr>
-        <td>Connecteur(hdmi,vga,dvi)</td>
-        <td>prolongement cable </td>
-        <td>2 - 10 / unité</td>
-              <tr>
-        <td>Switch réseau</td>
-        <td>Distribue la connexion entre plusieurs appareils</td>
-        <td>2000 - 7000 </td>
-      </tr>
-      <tr>
-        <td>Connecteurs (RJ45, USB, HDMI,sata)</td>
-        <td>Interconnexion des périphériques</td>
-        <td>500 - 1500</td>
-      </tr>
-      <tr>
-        <td>Microprocesseur (CPU)</td>
-        <td>Cerveau de l’ordinateur</td>
-        <td>7,000 - 10,000 </td>
-      </tr>
-      <tr>
-        <td> imprimante termique</td>
-        <td>Impression de fiche de vente et borlette</td>
-        <td>12,000 - 16,000</td>
-      </tr>
-      <tr>
-        <td>memoire RAM </td>
-        <td>Vie données provisoire</td>
-        <td>4000 - 1500 </td>
-      </tr>
-    </tbody>
-  </table>
-</section>
-
-
-                `
-            },
-                   reseau: {
-                title: "Installations et gestion de reseaux",
-                content: `
-                  <section id="types-reseaux">
-  <h2> Réseaux Informatiques nous pouvons installer</h2>
-  <ul>
-    <li>
-      <strong>LAN (Local Area Network)</strong> : Réseau local utilisé dans les maisons, bureaux ou écoles. Vitesse rapide et portée limitée.
-    </li>
-    <li>
-      <strong>WAN (Wide Area Network)</strong> : Réseau étendu couvrant une grande zone géographique, comme Internet.
-    </li>
-    <li>
-      <strong>MAN (Metropolitan Area Network)</strong> : Couvre une ville entière, .
-    </li>
-    <li>
-      <strong>WLAN (Wireless LAN)</strong> : Version sans fil du LAN, généralement basée sur le Wi-Fi.
-    </li>
-    <li>
-      <strong>VPN (Virtual Private Network)</strong> : Crée une connexion sécurisée via Internet entre un utilisateur et un réseau privé.
-    </li>
-    <li>
-      <strong>PAN (Personal Area Network)</strong> : Réseau personnel de courte portée, comme entre un téléphone et un autre apareil.
-    </li>
-  </ul>
-</section>
-                `
-            },
+            web: { title: "Création de Site Web", content: "<p>Nous créons des sites web professionnels, responsifs et optimisés SEO.</p><ul><li>Sites vitrines</li><li>E-commerce</li><li>Maintenance incluse</li></ul><p>Tarif dès 25,000 HTG</p>" },
+            app: { title: "Création d'Applications", content: "<p>Applications mobiles, web et bureau sur mesure.</p><ul><li>iOS, Android, PWA</li><li>Applications commerciales, éducatives</li><li>Paris sportifs, loteries</li></ul><p>Tarif dès 50,000 HTG</p>" },
+            maintenance: { title: "Maintenance", content: "<p>Assistance technique à distance ou présentielle, nettoyage, sauvegarde.</p><p>Tarif dès 5,000 HTG</p>" },
+            design: { title: "Design Graphique", content: "<p>Logos, flyers, cartes de visite, identité visuelle.</p><p>Tarif dès 3,000 HTG</p>" },
+            cameras: { title: "Caméras de surveillance", content: "<p>Installation DVR, IP, HD. Configuration complète.</p><p>Tarif dès 15,000 HTG</p>" },
+            training: { title: "Formation", content: "<p>Informatique de bureau, programmation, réseaux.</p><p>Tarif dès 10,000 HTG</p>" },
+            consultation: { title: "Consultation", content: "<p>Stratégie digitale, audit, accompagnement projet.</p><p>Tarif dès 8,000 HTG</p>" },
+            reseau: { title: "Gestion de réseaux", content: "<p>Installation LAN, WAN, VPN, WIFI sécurisé.</p><p>Tarif dès 20,000 HTG</p>" },
+            vente: { title: "Vente de matériel", content: "<p>Ordinateurs, disques durs, routeurs, connecteurs.</p><p>Prix variable selon équipement.</p>" }
         };
 
-        // Gestion de la modal des services
+        // Détails des APPLICATIONS en CRÉOLE
+        const appDetails = {
+            lotato: {
+                title: "LOTATO - Jesyon Bòlèt / Loterie",
+                content: `<p><strong>LOTATO</strong> se yon sistèm konplè pou jesyon bòlèt (borlette) ki pèmèt:</p>
+                <ul><li>✓ Ajan yo vann pi rapid san yo pa bezwen anpil entènèt.</li>
+                <li>✓ Sipèvize ak direktè kontwole tout tranzaksyon an tan reyèl.</li>
+                <li>✓ Sekirite maksimòm, pa janm tombe, rapò detaye chak jou.</li>
+                <li>✓ Aksè pou mèt bòlèt, sipèvizè, direktè ak ajan nan menm platfòm.</li></ul>
+                <p> pwi yo ,konekte machin komanse nan 10 dola rive nan 6 dola selon kantite machin ou koneekte</p>
+                <p> ou kapab lwe pou 1 ane soti 800 rive nan 1200 dola ou kapab konekte jiska 100 machin</p>
+                <p> ou kapab achte sistèm paw soti 8 mil a 16 mil dola ameriken ,wap kapab konekte nenpot kantite machin</p>
+               <p>💡 Avantage: Pa konsome done, vitès, kontwòl total. Disponib pou lokasyon oswa achte oubyen konekte machin.</p>`
+
+            }, 
+            novacare: {
+                title: "NOVACARE - Koneksyon Lopital",
+                content: `<p><strong>NOVACARE</strong> se platfòm entelijan ki konekte tout sèvis yon lopital:</p>
+                <ul><li>✓ Jesyon pasyan santralize (dosye medikal, rezèvasyon randevou).</li>
+                <li>✓ Doktè ka jwenn enfòmasyon pasyan aleka (telemedsin).</li>
+                <li>✓ Administrasyon fasilite rapò ak jesyon biwo.</li>
+                <li>✓ pasyan yo kapab resevwa rezulta analiz yo epi konsilte a distans.</li>
+                <li>✓ resevwa plizye tip peman.</li>
+                <li>✓ jere prezans anplwaye yo.</li>
+                <li>✓ Sekirite done ak otomatizasyon pwosesis lopital.</li></ul>
+                <p>🏥 Aksè rapid, koneksyon an tan reyèl, amelyore swen pasyan yo.</p>`
+            },
+            debestra: {
+                title: "DEBESTA - Swiv Machin an Tan Reyèl",
+                content: `<p><strong>DEBESTA</strong> se solisyon pou jere flòt otomobil ak swiv machin:</p>
+                <ul><li>✓ Lokalizasyon GPS an tan reyèl.</li>
+                <li>✓ Rapò sou vitès, deplasman, konsomasyon gaz.</li>
+                <li>✓ Alèt si machin sòt nan zòn otorize.</li>
+                <li>✓ Adapte pou transpò piblik, kamyon, konpayi lokasyon.</li></ul>
+                <p>📱 Aksè sou mobil ak òdinatè, kontwòl total sou flòt ou.</p>`
+            },
+            busitech: {
+                title: "BUSITECH jere biznis ou san kè sote",
+                content: `<p><strong>busitech</strong> se solisyon pou jere biznis ou:</p>
+                <ul><li>✓ kalkile vant ak lot aktivite an tan reyèl.</li>
+                <li>✓ bay fich ,kalkile rapò ak estatistik.</li>
+                <li>✓ Alèt si machandiz pweske fini ak ekspire.</li>
+                <li>✓ Adapte pou telefòn laptòp ak tablet.</li></ul>
+                <p>📱 kontrole tout detay biznis ou ak yon sèl aplikasyon.</p>`
+            },
+            sef: {
+                title: "SEF (Système Éducation Futuriste)",
+                content: `<p><strong>SEF</strong> se yon lojisyèl edikasyon modèn pou lekòl, kolèj ak inivèsite:</p>
+                <ul><li>✓ Jesyon nòt, prezans, dosye elèv.</li>
+                <li>✓ Kominikasyon ant pwofesè, paran ak administratè.</li>
+                   <li>✓ Konekte tout biwo yo ansanm ,jere disiplin.</li>
+                      <li>✓ jenere kanè badge ak let e jere ekonoma.</li>
+                <li>✓ Bibliyotèk dijital, kou anliy, evalyasyon sou entènèt.</li>
+                <li>✓ Aksè aleka pou paran swiv pwogrè timoun yo.</li></ul>
+                <p>📚 Edikasyon futurist, senp ak efikas.</p>`
+            },
+            datphar: {
+                title: "DATPHAR - Jesyon Famasi",
+                content: `<p><strong>DATPHAR</strong> se lojisyèl jesyon famasi total:</p>
+                <ul><li>✓ Jesyon estòk medikaman ak dat ekspirasyon.</li>
+                <li>✓ Vant ak resèt medikal otomatik.</li>
+                <li>✓ Rapò finansye ak estatistik chak jou.</li>
+                <li>✓ Fasil pou itilize, fòmasyon rapid.</li></ul>
+                <p>💊 Eseye DATPHAR pou optimize jesyon famasi ou.</p>`
+            }
+        };
+
         const modal = document.getElementById('serviceModal');
         const modalTitle = document.getElementById('modalServiceTitle');
         const modalBody = document.getElementById('modalServiceBody');
-        const closeModal = document.querySelectorAll('.close-modal');
+        const closeBtns = document.querySelectorAll('.close-modal');
         const knowMoreBtns = document.querySelectorAll('.know-more-btn');
 
+        // Gestion des boutons "En savoir plus" pour SERVICES et APPLICATIONS
         knowMoreBtns.forEach(btn => {
             btn.addEventListener('click', function(e) {
                 e.preventDefault();
-                const service = this.getAttribute('data-service');
+                const serviceKey = this.getAttribute('data-service');
+                const appKey = this.getAttribute('data-app-detail');
                 
-                if (serviceDetails[service]) {
-                    modalTitle.textContent = serviceDetails[service].title;
-                    modalBody.innerHTML = serviceDetails[service].content;
+                if (serviceKey && serviceDetails[serviceKey]) {
+                    modalTitle.textContent = serviceDetails[serviceKey].title;
+                    modalBody.innerHTML = serviceDetails[serviceKey].content;
                     modal.style.display = 'block';
+                } 
+                else if (appKey && appDetails[appKey]) {
+                    modalTitle.textContent = appDetails[appKey].title;
+                    modalBody.innerHTML = appDetails[appKey].content;
+                    modal.style.display = 'block';
+                }
+                else {
+                    // fallback pour anciens liens
+                    console.log("Aucun détail trouvé");
                 }
             });
         });
 
-        closeModal.forEach(btn => {
+        // Fermeture des modals
+        closeBtns.forEach(btn => {
             btn.addEventListener('click', function() {
                 modal.style.display = 'none';
                 document.getElementById('videoModal').style.display = 'none';
@@ -1155,11 +960,10 @@
         });
 
         window.addEventListener('click', function(e) {
-            if (e.target === modal) {
-                modal.style.display = 'none';
-            }
-            if (e.target === document.getElementById('videoModal')) {
-                document.getElementById('videoModal').style.display = 'none';
+            if (e.target === modal) modal.style.display = 'none';
+            const vidModal = document.getElementById('videoModal');
+            if (e.target === vidModal) {
+                vidModal.style.display = 'none';
                 document.getElementById('modalVideo').pause();
             }
         });
@@ -1168,45 +972,26 @@
         const videoThumbnails = document.querySelectorAll('.video-thumbnail');
         const videoModal = document.getElementById('videoModal');
         const modalVideo = document.getElementById('modalVideo');
-
-        videoThumbnails.forEach(thumbnail => {
-            thumbnail.addEventListener('click', function() {
-                const videoSrc = this.getAttribute('data-video');
-                modalVideo.src = videoSrc;
+        videoThumbnails.forEach(thumb => {
+            thumb.addEventListener('click', function() {
+                const src = this.getAttribute('data-video');
+                modalVideo.src = src;
                 videoModal.style.display = 'block';
             });
         });
 
-        // Form submission handling
+        // Formulaire contact WhatsApp
         document.getElementById('serviceForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            
-            // Get form data
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const phone = document.getElementById('phone').value;
             const message = document.getElementById('message').value;
-            
-            // Get selected services
-            const selectedServices = [];
-            document.querySelectorAll('input[name="services"]:checked').forEach(checkbox => {
-                selectedServices.push(checkbox.value);
-            });
-            
-            // Create WhatsApp message
-            const whatsappMessage = `Bonjour, je m'appelle ${name}. Je suis intéressé(e) par les services suivants: ${selectedServices.join(', ')}. ${message}. Mon numéro est ${phone} et mon email est ${email}.`;
-            
-            // Encode message for URL
-            const encodedMessage = encodeURIComponent(whatsappMessage);
-            
-            // Open WhatsApp with pre-filled message
-            window.open(`https://wa.me/50940104585?text=${encodedMessage}`, '_blank');
-            
-            // Reset form
-            document.getElementById('serviceForm').reset();
-            
-            // Show success message
-            alert('Votre demande a été envoyée avec succès! Vous allez être redirigé vers WhatsApp.');
+            const selectedServices = Array.from(document.querySelectorAll('input[name="services"]:checked')).map(cb => cb.value);
+            const whatsappMsg = `Bonjour, je m'appelle ${name}. Services: ${selectedServices.join(', ')}. ${message}. Tél: ${phone}, Email: ${email}`;
+            window.open(`https://wa.me/50940104585?text=${encodeURIComponent(whatsappMsg)}`, '_blank');
+            this.reset();
+            alert("Demande envoyée ! Vous serez redirigé vers WhatsApp.");
         });
     </script>
 </body>
